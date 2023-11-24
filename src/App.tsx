@@ -1,3 +1,4 @@
+import { Form } from "./components/Form/Form";
 import { useCountries } from "./hooks/useCountries";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     </>
   ) : (
     <>
+      <Form onSubmit={(formValues) => console.log({ formValues })} />
       <pre>{JSON.stringify(countries, null, 2)}</pre>
     </>
   );
